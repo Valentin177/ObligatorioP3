@@ -1,0 +1,17 @@
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\bin\Debug\net7.0\LogicaAccesoDatos.deps.json
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\bin\Debug\net7.0\LogicaAccesoDatos.runtimeconfig.json
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\bin\Debug\net7.0\LogicaAccesoDatos.dll
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\bin\Debug\net7.0\LogicaAccesoDatos.pdb
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\bin\Debug\net7.0\LogicaNegocio.dll
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\bin\Debug\net7.0\LogicaNegocio.pdb
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.csproj.AssemblyReference.cache
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.AssemblyInfoInputs.cache
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.AssemblyInfo.cs
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.csproj.CopyComplete
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.dll
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\refint\LogicaAccesoDatos.dll
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.pdb
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\LogicaAccesoDatos.genruntimeconfig.cache
+C:\Users\valen\Desktop\Obligatorio P3 Valentin De Negris 284110\Obligatorio\LogicaAccesoDatos\obj\Debug\net7.0\ref\LogicaAccesoDatos.dll

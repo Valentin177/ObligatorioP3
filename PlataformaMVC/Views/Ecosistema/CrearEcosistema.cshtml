@@ -1,0 +1,90 @@
+﻿@model PlataformaMVC.Models.EcosistemaViewModel;
+
+
+<h2>Crear Ecosistema</h2>
+<span class="text-danger"> @ViewBag.Error </span>
+
+<div class="row">
+    <div class="col-4">
+        <form class="form-control" method="post" asp-action="CrearEcosistema" enctype="multipart/form-data" asp-controller="Ecosistema">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nombreEco" class="control-label"> Nombre del Ecosistema: </label>
+                <input asp-for="nombreEco" class="form-control" required />
+                <span asp-validation-for="nombreEco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="latitud" class="control-label"> Ingrese Latitud: </label>
+                <input asp-for="latitud" type="text" class="form-control" required />
+                <span asp-validation-for="latitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="longitud" class="control-label"> Ingrese Latitud: </label>
+                <input asp-for="longitud" type="text" class="form-control" required />
+                <span asp-validation-for="longitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Eco.area" class="control-label"> Ingrese Area: </label>
+                <input asp-for="Eco.area" type="text" class="form-control" required />
+                <span asp-validation-for="Eco.area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label> Paises: </label>
+                <select name="idPaisSeleccionado">
+                    @foreach (LogicaNegocio.Dominio.Pais p in Model.Paises)
+                    {
+                        if(p.idPais == Model.idPaisSeleccionado)
+                        {
+                            <option selected asp-for="idPaisSeleccionado" value="@p.idPais"> @p.nombrePais.nombre </option>
+                        }
+                        else
+                        {
+                            <option value="@p.idPais" asp-for="idPaisSeleccionado"> @p.nombrePais.nombre </option>
+                        }
+
+                     }
+                </select>
+            </div>
+            <div class="form-group">
+                <label> Estado de Conservacion: </label>
+                <select name="estadoSeleccionado">
+                    @foreach (LogicaNegocio.Dominio.EstadoConservacion e in Model.estadosCons)
+                    {
+                        if(e.idEstado == Model.estadoSeleccionado)
+                        {
+                            <option selected asp-for="estadoSeleccionado" value="@e.idEstado"> @e.nombreEstado</option>
+                        }
+                        else{
+                            <option value="@e.idEstado" asp-for="estadoSeleccionado"> @e.nombreEstado</option>
+                        }
+
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label> Amenazas </label>
+                <select name="amenazaSeleccionada">
+                    @foreach (LogicaNegocio.Dominio.Amenaza a in Model.amenazaS)
+                    {
+                        if(a.idAmenaza == Model.amenazaSeleccionada)
+                        {
+                            <option selected asp-for="amenazaSeleccionada" value="@a.idAmenaza"> @a.NombreAmenaza </option>
+                        }else{
+                            <option value="@a.idAmenaza" asp-for="amenazaSeleccionada"> @a.NombreAmenaza </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="descrip" class="control-label"> Ingrese Descripcion del Ecosistema: </label>
+                <input asp-for="descrip" type="text-box" class="form-control" required />
+                <span asp-validation-for="descrip" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="CrearEcosistema" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+

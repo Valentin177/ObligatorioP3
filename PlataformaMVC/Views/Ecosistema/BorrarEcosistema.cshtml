@@ -1,0 +1,23 @@
+﻿@model IEnumerable<LogicaNegocio.Dominio.Ecosistema>
+
+@if(Model.Count() == 0)
+{
+    <h2> Actualmente no hay Ecosistemas registrados.</h2>
+}
+
+@if(Model.Count() > 0)
+{
+    <form asp-action="BorrarEcosistema" onsubmit="return confirm('Estas seguro que deseas borrar este Ecosistema?');">
+        <select>
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li value="@item.idEcosistema" name="idEco"> @item.nombreEcosistema.nombre  </li>
+                }
+            </ul>
+        </select>
+
+        <input type="submit" value="BorrarEcosistema" class="btn btn-primary" />
+    </form> 
+}
+

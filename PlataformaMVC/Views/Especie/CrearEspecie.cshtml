@@ -1,0 +1,99 @@
+﻿@model PlataformaMVC.Models.EspecieViewModel
+
+<h2>Agregar Especie</h2>
+<span class="text-danger"> @ViewBag.Error </span>
+<span class="text-info"> @ViewBag.Exito </span>
+<div class="row">
+    <div class="col-6">
+        <form class="form-control" method="post" asp-action="CrearEspecie" enctype="multipart/form-data" asp-controller="Especie">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="especie.nombreCientifico" class="control-label"> Nombre cientifico: </label>
+                <input asp-for="especie.nombreCientifico" class="form-control" required />
+                <span asp-validation-for="especie.nombreCientifico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="especie.nombreVulgar" class="control-label"> Ingrese nombre "vulgar": </label>
+                <input asp-for="especie.nombreVulgar" type="text" class="form-control" />
+                <span asp-validation-for="especie.nombreVulgar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descripcionEVM" class="control-label"> Ingrese Descripcion: </label>
+                <input asp-for="descripcionEVM" type="text-box" class="form-control" required />
+                <span asp-validation-for="descripcionEVM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>  -------Rangos de peso de la especie-------  </label>
+                <label asp-for="rangoDesdePeso" class="control-label"> Rango desde: </label>
+                <input asp-for="rangoDesdePeso" type="number" class="form-control" required />
+                <span asp-validation-for="rangoDesdePeso" class="text-danger"></span>
+                <label asp-for="rangoHastaPeso" class="control-label"> Rango hasta: </label>
+                <input asp-for="rangoHastaPeso" type="number" class="form-control" required />
+                <span asp-validation-for="rangoHastaPeso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>  -------Rangos de Longitud de la especie-------  </label>
+                <label asp-for="rangoDesdeLongitud" class="control-label"> Rango desde: </label>
+                <input asp-for="rangoDesdeLongitud" type="number" class="form-control" required />
+                <span asp-validation-for="rangoDesdeLongitud" class="text-danger"></span>
+                <label asp-for="rangoHastaLongitud" class="control-label"> Rango hasta: </label>
+                <input asp-for="rangoHastaLongitud" type="number" class="form-control" required />
+                <span asp-validation-for="rangoHastaLongitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label> Ecosistema: </label>
+                <select name="idEcosistemaVM">
+                    @foreach (LogicaNegocio.Dominio.Ecosistema ec in Model.Ecosistemas)
+                    {
+                        if (ec.idEcosistema == Model.idEcosistemaVM)
+                        {
+                            <option selected asp-for="idEcosistemaVM" value="@ec.idEcosistema"> @ec.nombreEcosistema.nombre </option>
+                        }
+                        else
+                        {
+                            <option value="@ec.idEcosistema" asp-for="idEcosistemaVM"> @ec.nombreEcosistema.nombre </option>
+                        }
+
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label> Estado de Conservacion: </label>
+                <select name="estadoEcoSeleccionado">
+                    @foreach (LogicaNegocio.Dominio.EstadoConservacion e in Model.EstadosCons)
+                    {
+                        if (e.idEstado == Model.estadoEcoSeleccionado)
+                        {
+                            <option selected asp-for="estadoEcoSeleccionado" value="@e.idEstado"> @e.nombreEstado</option>
+                        }
+                        else
+                        {
+                            <option value="@e.idEstado" asp-for="estadoEcoSeleccionado"> @e.nombreEstado</option>
+                        }
+
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label> Amenazas </label>
+                <select name="amenazaSeleccionada">
+                    @foreach (LogicaNegocio.Dominio.Amenaza a in Model.Amenazas)
+                    {
+                        if (a.idAmenaza == Model.amenazaSeleccionada)
+                        {
+                            <option selected asp-for="amenazaSeleccionada" value="@a.idAmenaza"> @a.NombreAmenaza </option>
+                        }
+                        else
+                        {
+                            <option value="@a.idAmenaza" asp-for="amenazaSeleccionada"> @a.NombreAmenaza </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar Especie" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
